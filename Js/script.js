@@ -24,53 +24,46 @@ function calculoValor() {
         descuento = total * descuento_15;
         document.getElementById('valorDesc').value = descuento;
 
-    
+
         totalDescuento = total - descuento;
         console.log(totalDescuento)
 
         document.getElementById('totalDesc').value = totalDescuento;
         document.getElementById('porcentaje').value = "15%";
 
-    } else {
-        if (total > 3280000 && total <= 6560000) {
+    } else if (total > 3280000 && total <= 6560000) {
 
 
-            descuento = total * descuento_25;
-            document.getElementById('valorDesc').value = descuento;
+        descuento = total * descuento_25;
+        document.getElementById('valorDesc').value = descuento;
 
-            totalDescuento = total - (total * descuento_25);
-            console.log(totalDescuento)
+        totalDescuento = total - (total * descuento_25);
+        console.log(totalDescuento)
 
-            document.getElementById('totalDesc').value = totalDescuento;
-            document.getElementById('porcentaje').value = "25%";
+        document.getElementById('totalDesc').value = totalDescuento;
+        document.getElementById('porcentaje').value = "25%";
 
-        } else {
-            if (total > 6560000 && total <= 9840000) {
+    } else if (total > 6560000 && total <= 9840000) {
 
-                descuento = total * descuento_35;
-                document.getElementById('valorDesc').value = descuento;
+        descuento = total * descuento_35;
+        document.getElementById('valorDesc').value = descuento;
 
 
-                totalDescuento = total - (total * descuento_35);
-                console.log(totalDescuento)
+        totalDescuento = total - (total * descuento_35);
+        console.log(totalDescuento)
 
-                document.getElementById('totalDesc').value = totalDescuento;
-                document.getElementById('porcentaje').value = "35%";
+        document.getElementById('totalDesc').value = totalDescuento;
+        document.getElementById('porcentaje').value = "35%";
 
-            } else {
-                if (total >= 9840000) {
-                    alert('No tienes derecho a ningún descuento')
-                }
-
-            }
-        }
+    } else if (total >= 9840000) {
+        alert('No tienes derecho a ningún descuento')
     }
 }
 
 let form = document.getElementById('formCom');
 
-form.addEventListener('submit',formSumbit);
+form.addEventListener('submit', formSumbit);
 
-function formSumbit(e){
+function formSumbit(e) {
     e.preventDefault();
 }
